@@ -15,7 +15,10 @@ class Word
       @output = [@input1, " and ", @input2, " are antigrams"]
       @output.join("")
     elsif (@antigram_check != 0) && (phrase_check != 0) && (input1 == input2)
-      @output = [@input1, " and ", @input2, " represent an example of an anagram phrase"]
+      @output = [@input1, " and ", @input2, " represent an example of anagram phrases"]
+      @output.join("")
+    elsif (@antigram_check != 0) && (phrase_check != 0) && (input1 != input2)
+      @output = [@input1, " and ", @input2, " represent an example of antigram phrases"]
       @output.join("")
     elsif (input1 != input2)
       @output = [@input1, " and ", @input2, " are not anagrams"]

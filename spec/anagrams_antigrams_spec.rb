@@ -20,6 +20,10 @@ describe('#anagrams_antigrams') do
   end
   it('checks for anagrams in a phrase') do
     test = Word.new("'bad credit'", "'debit card'")
-    expect(test.anagram_check("bad credit", "debit card")).to(eq("'bad credit' and 'debit card' represent an example of an anagram phrase"))
+    expect(test.anagram_check("bad credit", "debit card")).to(eq("'bad credit' and 'debit card' represent an example of anagram phrases"))
+  end
+  it('checks for anagrams in a phrase') do
+    test = Word.new("'odd man'", "'big jet'")
+    expect(test.anagram_check("odd man", "big jet")).to(eq("'odd man' and 'big jet' represent an example of antigram phrases"))
   end
 end
