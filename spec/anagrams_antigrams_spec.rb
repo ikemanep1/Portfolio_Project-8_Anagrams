@@ -3,7 +3,7 @@ require('anagrams_antigrams')
 
 describe('#anagrams_antigrams') do
   it('checks if two words are anagrams') do
-    test = Matrix.new(fate, feat)
-    expect(test.prime_sift()).to(eq("YES!"))
+    test = Word.new("fate", "feat")
+    expect(test.anagram_check("fate", "feat")).to(eq("fate and feat are anagrams"))
   end
 end
