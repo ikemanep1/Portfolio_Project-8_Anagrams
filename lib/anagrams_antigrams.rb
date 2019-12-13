@@ -9,7 +9,11 @@ class Word
     input1 = @input1.upcase.chars.to_a.sort.join()
     input2 = @input2.upcase.chars.to_a.sort.join()
     word_check = input1.scan(/[AEIOU]/).length()
-    if (input1 != input2)
+    @antigram_check = input1.scan(/[#{input2}]/).length()
+    if (@antigram_check == 0)
+      @output = [@input1, " and ", @input2, " are antigrams"]
+      @output.join("")
+    elsif (input1 != input2)
       @output = [@input1, " and ", @input2, " are not anagrams"]
       @output.join("")
     elsif (input1 != input2) && (word_check == 0)

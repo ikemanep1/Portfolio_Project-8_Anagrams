@@ -10,8 +10,12 @@ describe('#anagrams_antigrams') do
     test = Word.new("Fate", "feat")
     expect(test.anagram_check("Fate", "feat")).to(eq("Fate and feat are anagrams"))
   end
-  it('checks if functionality accounts for capital letters') do
+  it('checks if functionality accounts for "words" that do not have vowels in them') do
     test = Word.new("NRSST", "NTSR")
     expect(test.anagram_check("NRSST", "NTSR")).to(eq("NRSST and NTSR are not anagrams"))
+  end
+  it('checks for antigrams') do
+    test = Word.new("meal", "foot")
+    expect(test.anagram_check("meal", "foot")).to(eq("meal and foot are antigrams"))
   end
 end
