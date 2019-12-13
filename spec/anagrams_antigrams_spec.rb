@@ -18,4 +18,8 @@ describe('#anagrams_antigrams') do
     test = Word.new("meal", "foot")
     expect(test.anagram_check("meal", "foot")).to(eq("meal and foot are antigrams"))
   end
+  it('checks for anagrams in a phrase') do
+    test = Word.new("'bad credit'", "'debit card'")
+    expect(test.anagram_check("bad credit", "debit card")).to(eq("'bad credit' and 'debit card' represent an example of an anagram phrase"))
+  end
 end

@@ -9,9 +9,13 @@ class Word
     input1 = @input1.upcase.chars.to_a.sort.join()
     input2 = @input2.upcase.chars.to_a.sort.join()
     word_check = input1.scan(/[AEIOU]/).length()
+    phrase_check = input1.scan(/[ ]/).length()
     @antigram_check = input1.scan(/[#{input2}]/).length()
     if (@antigram_check == 0)
       @output = [@input1, " and ", @input2, " are antigrams"]
+      @output.join("")
+    elsif (@antigram_check != 0) && (phrase_check != 0) && (input1 == input2)
+      @output = [@input1, " and ", @input2, " represent an example of an anagram phrase"]
       @output.join("")
     elsif (input1 != input2)
       @output = [@input1, " and ", @input2, " are not anagrams"]
