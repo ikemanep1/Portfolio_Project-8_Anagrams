@@ -13,25 +13,19 @@ class Word
     @antigram_check = input1.scan(/[#{input2}]/).length()
     if (@antigram_check == 0)
       @output = [@input1, " and ", @input2, " are antigrams"]
-      @output.join("")
     elsif (@antigram_check != 0) && (phrase_check != 0) && (input1 == input2)
       @output = [@input1, " and ", @input2, " represent an example of anagram phrases"]
-      @output.join("")
     elsif (@antigram_check != 0) && (phrase_check != 0) && (input1 != input2)
       @output = [@input1, " and ", @input2, " represent an example of antigram phrases"]
-      @output.join("")
     elsif (input1 != input2)
       @output = [@input1, " and ", @input2, " are not anagrams"]
-      @output.join("")
     elsif (input1 != input2) && (word_check == 0)
       @output = [@input1, " and ", @input2, " are not anagrams, because they are not words!"]
-      @output.join("")
     elsif (input1 == input2) && (word_check == 0)
       @output = [@input1, " and ", @input2, " are not anagrams, because they are not words!"]
-      @output.join("")
     else
       @output = [@input1, " and ", @input2, " are anagrams"]
-      @output.join("")
     end
+    @output.join("")
   end
 end
