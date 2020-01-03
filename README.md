@@ -11,7 +11,7 @@ _This application will take a pair of words or phrases and check for if they are
 ### Setup/Installation Requirements
 
 * _1: download from Github_
-* _2: navigate to the file through the terminal
+* _2: navigate to the file through the terminal_
 * _3: type 'atom .'_
 * _4: type 'bundle' in the terminal_
 
@@ -41,7 +41,7 @@ _gems used:
 
 -'pry'
 -'rspec'
-_
+
 
 
 # License
